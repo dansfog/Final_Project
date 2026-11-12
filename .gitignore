@@ -1,0 +1,16 @@
+# Terraform files (CRITICAL SECURITY: never commit state or variables)
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform.lock.hcl
+
+# OS & Editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Environment & Secrets
+.env
+*.pem
+*.key
