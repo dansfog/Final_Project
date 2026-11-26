@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     classDef step fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000
 
@@ -12,3 +13,4 @@ flowchart TD
     S5["שלב 5: ניטור, גיבויים ותיעוד<br/>• הקמת התראות ולוגים ב-CloudWatch<br/>• בדיקות עומסים, דמו חי ותיעוד מלא"]:::step
 
     S1 --> S2 --> S3 --> S4 --> S5
+```
