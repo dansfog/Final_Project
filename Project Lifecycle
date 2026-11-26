@@ -1,0 +1,14 @@
+flowchart TD
+    classDef step fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000
+
+    S1["שלב 1: תכנון, GitOps ורשת<br/>• הגדרת Repo, עבודה עם Branches ו-PR<br/>• הקמת VPC מבודד, Public/Private Subnets ו-NAT"]:::step
+
+    S2["שלב 2: אחסון מאובטח ותשתית מחשוב<br/>• הקמת EFS מוצפן (KMS) לשמירת מידע<br/>• הגדרת Security Groups (Zero Trust)<br/>• הקמת ECS Cluster ו-Network Load Balancer"]:::step
+
+    S3["שלב 3: הקשחת אפליקציה וסודות<br/>• כתיבת Dockerfile מוקשח (Non-Root, Read-Only)<br/>• העלאת Image ל-AWS ECR פרטי<br/>• ניהול סיסמאות דרך AWS Secrets Manager"]:::step
+
+    S4["שלב 4: אוטומציה ושערי אבטחה (CI/CD)<br/>• חיבור GitHub Actions ל-AWS דרך OIDC<br/>• הוספת סורקים: Gitleaks, Checkov, Trivy<br/>• פריסה אוטומטית וחסימת קוד פגיע"]:::step
+
+    S5["שלב 5: ניטור, גיבויים ותיעוד<br/>• הקמת התראות ולוגים ב-CloudWatch<br/>• בדיקות עומסים, דמו חי ותיעוד מלא"]:::step
+
+    S1 --> S2 --> S3 --> S4 --> S5
